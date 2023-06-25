@@ -36,32 +36,42 @@ class _CalculatorState extends State<Calculator> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: screeWidth / 3,
-                    child: TextField(
-                      controller: _num1Controller,
-                      keyboardType: TextInputType.number,
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: "Num 1",
-                        border: OutlineInputBorder(),
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      width: screeWidth / 3,
+                      child: TextField(
+                        controller: _num1Controller,
+                        keyboardType: TextInputType.number,
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          hintText: "Num 1",
+                          border: OutlineInputBorder(),
+                        ),
                       ),
                     ),
                   ),
-                  Container(
-                    child: Text(
-                      _resultOperator,
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: Text(
+                        _resultOperator,
+                      ),
                     ),
                   ),
-                  Container(
-                    width: screeWidth / 3,
-                    child: TextField(
-                      controller: _num2Controller,
-                      keyboardType: TextInputType.number,
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: "Num 2",
-                        border: OutlineInputBorder(),
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      width: screeWidth / 3,
+                      child: TextField(
+                        controller: _num2Controller,
+                        keyboardType: TextInputType.number,
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                          hintText: "Num 2",
+                          border: OutlineInputBorder(),
+                        ),
                       ),
                     ),
                   ),
