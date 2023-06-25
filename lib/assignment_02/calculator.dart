@@ -31,7 +31,7 @@ class _CalculatorState extends State<Calculator> {
             ),
             Container(
               margin: EdgeInsets.symmetric(
-                horizontal: 64,
+                horizontal: 32,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -85,7 +85,7 @@ class _CalculatorState extends State<Calculator> {
 
             //Result
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 64),
+              margin: EdgeInsets.symmetric(horizontal: 32),
               padding: EdgeInsets.symmetric(
                 horizontal: 16,
                 vertical: 32,
@@ -114,7 +114,7 @@ class _CalculatorState extends State<Calculator> {
             ),
 
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 64,),
+              margin: EdgeInsets.symmetric(horizontal: 32,),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
