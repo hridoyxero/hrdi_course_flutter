@@ -26,7 +26,7 @@ class _CalculatorState extends State<Calculator> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
             Container(
@@ -79,7 +79,7 @@ class _CalculatorState extends State<Calculator> {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
 
