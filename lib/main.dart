@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hrdi_course_flutter/assignment_02/calculator.dart';
-import 'package:hrdi_course_flutter/assignment_03/expenses_screen.dart';
+import 'package:hrdi_course_flutter/assignment_04/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ExpensesScreen(),
+      home: const HomeScreen(),
     );
   }
 }
