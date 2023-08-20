@@ -81,6 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       hintText: "example@email.com",
                       labelText: "Email",
                     ),
+                    keyboardType: TextInputType.emailAddress,
                   ),
                 ),
 

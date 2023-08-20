@@ -6,6 +6,8 @@ import 'package:hrdi_course_flutter/assignment_06/assignment_06_b/feeds_view.dar
 import 'package:hrdi_course_flutter/assignment_06/assignment_06_b/model/post_model.dart';
 import 'package:hrdi_course_flutter/assignment_06/assignment_06_b/post_item.dart';
 import 'package:hrdi_course_flutter/assignment_06/assignment_06_b/profile_view.dart';
+import 'package:hrdi_course_flutter/assignment_07/add_post_screen.dart';
+import 'package:hrdi_course_flutter/assignment_07/posts_view.dart';
 import 'package:hrdi_course_flutter/res/app_colors.dart';
 import 'package:hrdi_course_flutter/utils/utils.dart';
 
@@ -23,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
   ];
   final _views = [
-    FeedsView(),
+    PostsView(),
     ChatsView(),
     ProfileView(),
   ];
@@ -33,7 +35,13 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(currentScreen == 0 ? "Feeds" : (currentScreen == 1 ? "Chats" : currentScreen == 2 ? "Profile" : "")),
+        title: Text(currentScreen == 0
+            ? "Feeds"
+            : (currentScreen == 1
+                ? "Chats"
+                : currentScreen == 2
+                    ? "Profile"
+                    : "")),
         centerTitle: true,
         actions: [
           Icon(Icons.notifications_rounded),
@@ -55,18 +63,22 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [],
       ),
       body: _views[_selectedViewIndex],
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Utils.navigateScreen(context, AddPostScreen());
+        },
+        child: const Icon(Icons.add),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: bottomItems,
         currentIndex: _selectedViewIndex,
         selectedItemColor: AppColors.primary,
-        onTap: (index){
+        onTap: (index) {
           _selectedViewIndex = index;
 
           currentScreen = index;
 
-          setState(() {
-
-          });
+          setState(() {});
         },
       ),
     );

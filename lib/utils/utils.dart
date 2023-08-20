@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 int currentScreen = 0;
 
 class Utils {
+  static void waitUntil(int timeInSeconds) async{
+    Future.delayed(Duration(seconds: timeInSeconds));
+  }
+  static String getCurrentTime(){
+    DateTime now = DateTime.now();
+
+    String formattedTime = DateFormat("kk:mm:ss, d, MMM EEE").format(now);
+
+    return formattedTime;
+  }
   static void navigateScreen(BuildContext context, Widget desiredScreen){
     Navigator.push(context, MaterialPageRoute(builder: (context) => desiredScreen));
   }
